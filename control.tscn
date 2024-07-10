@@ -1,0 +1,146 @@
+[gd_scene load_steps=17 format=3 uid="uid://dv3r4lvy6o3my"]
+
+[ext_resource type="Texture2D" uid="uid://dl0r3to3edvmg" path="res://img/Game festival (17).svg" id="1_rdojd"]
+[ext_resource type="FontFile" uid="uid://c00ah2nld1mk4" path="res://font/Lancelot/Lancelot-Regular.ttf" id="2_7bp0r"]
+[ext_resource type="Texture2D" uid="uid://bj45e1m8rxrtx" path="res://img/Game festival (12).svg" id="3_1w8ht"]
+[ext_resource type="Texture2D" uid="uid://ds4sl0hjp15dk" path="res://img/Game festival (9).svg" id="4_6vdni"]
+[ext_resource type="Texture2D" uid="uid://cr13c8qn2bwl0" path="res://img/Game festival (7).svg" id="5_qwiep"]
+[ext_resource type="Texture2D" uid="uid://b05jwt206lvsk" path="res://img/Game festival (6).svg" id="6_hkrme"]
+[ext_resource type="Texture2D" uid="uid://v6egovp6lavo" path="res://img/Game festival (13).svg" id="7_pwf0k"]
+[ext_resource type="Texture2D" uid="uid://c0isjitkvqkbo" path="res://img/Game festival (10).svg" id="8_130i1"]
+[ext_resource type="Texture2D" uid="uid://yb742addxsp1" path="res://img/Game festival (11).svg" id="9_g33er"]
+[ext_resource type="Texture2D" uid="uid://bmn46ln5elic4" path="res://img/Game festival (8).svg" id="10_k7ee1"]
+[ext_resource type="Texture2D" uid="uid://dplayd5o2vrra" path="res://img/Game festival (14).svg" id="11_mvbop"]
+[ext_resource type="Texture2D" uid="uid://roo24ct8wreh" path="res://img/Game festival (5).svg" id="12_l11tu"]
+[ext_resource type="Texture2D" uid="uid://bkb2oya27f2rr" path="res://img/Game festival (4).svg" id="13_01lmv"]
+[ext_resource type="Texture2D" uid="uid://b2413ust7xcy2" path="res://img/ingieneria.svg" id="14_u3in8"]
+[ext_resource type="Texture2D" uid="uid://g4wf70rult7h" path="res://img/ucn.svg" id="15_5rol4"]
+[ext_resource type="Texture2D" uid="uid://cda8qeg3uf63o" path="res://img/Untitled design (1).svg" id="16_ema5q"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="GameFestival(17)" type="Sprite2D" parent="."]
+position = Vector2(960, 542.5)
+scale = Vector2(1, 0.959893)
+texture = ExtResource("1_rdojd")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 578.0
+offset_top = 44.0
+offset_right = 1337.0
+offset_bottom = 251.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_7bp0r")
+theme_override_font_sizes/font_size = 9
+text = "Terminal Infection\" es un juego de bullet hell inverso que combina elementos de RPG retro. Está fuertemente inspirado en \"Vampire Survivors,\" pero en lugar de basarse en magia, utiliza físicas de balas. Nuestro objetivo es ofrecer una nueva perspectiva en el gameplay, centrada en la trayectoria de los proyectiles y la precisión necesaria para impactar a los enemigos. 
+
+Otro de nuestros desafios fue replicar 2 elementos que coronan a “vampire survivors”como una joya del ultimo tiempo; Lo adictivo, y visualmente llamativo, que es. para lo primero, como equipo optamos por un sistema de subida de nivel frenetico que recompensara constamente al jugador, y para lo segundo, un fuerte enfoque en las animaciones correspondientes tanto para lo que es el HUD como para las habilidades en cuestion. Lamentablemente, muchas de las ideas fueron descartadas o no basto el tiempo para su implementacion, pero yo, quien se encargo de la dimension visual del proyecto, puedo exponer como fueron evolucionando aquellas, o cuales fueron las que sobrevivieron y convirtieron a “Terminal infecction” en lo que es hoy.   
+
+En detalle, mis aportes fueron los siguientes:
+En cuanto a habilidades, desarrollé una \"bomba\" que involucra tres procesos diferentes: la animación inicial, la zona de colisión y la animación final. Para estos tres procesos utilicé paralelismo, Tweets, y alineación en una línea de tiempo.
+En hud, diseñe un prototipo de la ventana y barra del level up, que fueron base para las versiones posteriores que lo reemplazaron.
+Y en logica. postule un sistema que hacia que las stats de las armas crecieran en proporcion a las estadisticas del personaje. por ejemplo, si te aumentabas la fuerza,, las armas pesadas se potenciaban, si aumentabas la inteligencia, los pem y otras armas tecnicas se potenciaban, y asi sucesivamente. Nuevamente, por temas de tiempo no fue finallizado para el lanzamiento, pero queda pendiente para una proxima version!"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 581.0
+offset_top = 461.0
+offset_right = 963.0
+offset_bottom = 731.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_7bp0r")
+theme_override_font_sizes/font_size = 9
+text = "Las herramientas y metodologías utilizadas en el desarrollo de \"Terminal Infection\" incluyen numerosos PDFs sobre Godot como recursos de aprendizaje y un enfoque de prueba y error con códigos paralelos en un entorno aislado llamado \"test,\" el cual permitía tener un entendimiento más profundo de Godot. Ademas, llevamos a cabo una planificación pulcra del código mediante las normas del UML, patrones de diseño, y buenas prácticas de POO.
+
+Por ejemplo, en el diseño del mecanismo de la bomba, se utilizaron tres patrones de diseño diferentes: Command, Factory y Observer pattern. En Command, se aislaba la habilidad per se en cuanto a su animación y los tweets correspondientes. En Factory, se encargaba de crear el objeto Command cuando se requería, luego lo almacenaba en root para que fuese visible, y finalmente lo eliminaba después de ejecutarlo, ahorrando así recursos. Por último, el Observer se encargaba de verificar cuándo se recibía un input para activar un Command o observaba cuándo se subía de nivel para así dejar disponible la habilidad (la bomba está disponible a partir del nivel 2). Considero que esta forma de diseñar permite discriminar con claridad las partes del código que se encargaban de la lógica, la relación con el árbol de nodos en ejecución, y la relación con las interacciones del usuario, respectivamente.
+
+Para la coordinación del equipo utilizábamos GitHub, en el cual cada uno de nosotros tenía una rama por separado, permitiendo trabajar paralelamente sin interrumpir o modificar el trabajo ajeno. Además, cada cierto tiempo, dictado por las reuniones semanales, fusionábamos dichas ramas. Algo que disminuyó la cantidad de conflictos al fusionar fue que trabajamos mayoritariamente en archivos o partes del código separadas."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 969.0
+offset_top = 445.0
+offset_right = 1351.0
+offset_bottom = 772.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_7bp0r")
+theme_override_font_sizes/font_size = 9
+text = "Al principio, queríamos que la historia simbolizara los desafíos de un estudiante de ITI, por ejemplo, que se desarrollara en un mundo virtual creado en una computadora o que el jefe final fuera nuestro jefe de carrera; Eric Ross. Además, deseábamos una jugabilidad sencilla pero atractiva, que al programarla nos planteara desafíos lógicos más que de diseño o artísticos. Así llegamos a \"Vampire Survivors\", que presenta una jugabilidad automatizada con un sistema de rol integrado, lo cual nos permitió trabajar con estadísticas y ecuaciones.
+
+Una vez seleccionada la idea base, faltaban ideas que supliera el vacío de la mecánica de experiencia. Si bien existía en la colectividad del equipo la idea de las estadísticas, aún no teníamos claro cuál iba a ser su repercusión en la jugabilidad en detalle o cómo comunicarle al jugador que no eran meros números, sino una parte fundamental de la jugabilidad. Fue entonces cuando propuse la idea de que las estadísticas del personaje estuvieran conectadas a las armas, creyendo que eso le daría una mayor profundidad y complejidad técnica al sistema. Básicamente, cada arma tendría un DPS, un tipo o categoría, y un coeficiente de afinidad. De esta forma, cada rasgo del personaje (puntería, destreza, inteligencia, etc.) estaría conectado a un tipo de arma (francotiradores, armas dobles, técnicas, etc.), y cuando el jugador aumentara uno de sus rasgos, automáticamente todas las armas del tipo relacionado mejorarían en función del coeficiente de afinidad, impactando así en el DPS del arma.
+Esta idea fue inspirada en D&D, el cual justamente tiene bonificaciones en el daño por las competencias de la clase (los magos hacen más daño si usan bastones, los asesinos con las dagas, y así sucesivamente). De hecho, el diseño de la ventana de nivel inicialmente se basaba en esta idea, ya que tenía una pequeña ventana que permitía hacer la comparación del DPS del arma antes y después de la mejora de estadísticas, proporcionando así un apoyo visual al jugador para que decidiera sabiamente qué rasgos mejorar."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="GameFestival(12)" type="Sprite2D" parent="."]
+position = Vector2(716, 354)
+texture = ExtResource("3_1w8ht")
+
+[node name="GameFestival(9)" type="Sprite2D" parent="."]
+position = Vector2(948, 358)
+texture = ExtResource("4_6vdni")
+
+[node name="GameFestival(7)" type="Sprite2D" parent="."]
+position = Vector2(875, 997)
+texture = ExtResource("5_qwiep")
+
+[node name="GameFestival(6)" type="Sprite2D" parent="."]
+position = Vector2(674, 1002)
+texture = ExtResource("6_hkrme")
+
+[node name="GameFestival(13)" type="Sprite2D" parent="."]
+position = Vector2(1196, 357)
+texture = ExtResource("7_pwf0k")
+
+[node name="GameFestival(10)" type="Sprite2D" parent="."]
+position = Vector2(711, 848)
+scale = Vector2(0.676471, 0.676471)
+texture = ExtResource("8_130i1")
+
+[node name="GameFestival(11)" type="Sprite2D" parent="."]
+position = Vector2(1227, 850)
+scale = Vector2(0.710526, 0.710526)
+texture = ExtResource("9_g33er")
+
+[node name="GameFestival(8)" type="Sprite2D" parent="."]
+position = Vector2(963, 872)
+texture = ExtResource("10_k7ee1")
+
+[node name="GameFestival(14)" type="Sprite2D" parent="."]
+position = Vector2(962, 26)
+texture = ExtResource("11_mvbop")
+
+[node name="GameFestival(5)" type="Sprite2D" parent="."]
+position = Vector2(1213, 1044)
+texture = ExtResource("12_l11tu")
+
+[node name="GameFestival(4)" type="Sprite2D" parent="."]
+position = Vector2(1058, 1016)
+texture = ExtResource("13_01lmv")
+
+[node name="Ingieneria" type="Sprite2D" parent="."]
+position = Vector2(1261, 959)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_u3in8")
+
+[node name="Ucn" type="Sprite2D" parent="."]
+position = Vector2(1313, 1036)
+scale = Vector2(0.492481, 0.492481)
+texture = ExtResource("15_5rol4")
+
+[node name="UntitledDesign(1)" type="Sprite2D" parent="."]
+position = Vector2(1645.83, -537.987)
+scale = Vector2(0.985938, 1.16146)
+texture = ExtResource("16_ema5q")
+offset = Vector2(6.76019, 49.2294)
