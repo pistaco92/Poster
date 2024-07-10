@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://73fiy2aggath"]
+
+[ext_resource type="Script" path="res://TextContainer.gd" id="1_fpp7e"]
+[ext_resource type="Texture2D" uid="uid://cclbg5ewmeomk" path="res://icon.svg" id="2_f7rw6"]
+
+[node name="TextContainer" type="Control"]
+layout_mode = 3
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_right = -5.0
+grow_vertical = 2
+script = ExtResource("1_fpp7e")
+scale_b = Vector2(5, 5)
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(512.5, 538.5)
+scale = Vector2(7.71094, 8.24219)
+texture = ExtResource("2_f7rw6")

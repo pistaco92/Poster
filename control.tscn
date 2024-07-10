@@ -1,21 +1,24 @@
-[gd_scene load_steps=19 format=3 uid="uid://dv3r4lvy6o3my"]
+[gd_scene load_steps=22 format=3 uid="uid://dv3r4lvy6o3my"]
 
+[ext_resource type="Script" path="res://controlRoot.gd" id="1_kll77"]
 [ext_resource type="Texture2D" uid="uid://dl0r3to3edvmg" path="res://img/Game festival (17).svg" id="1_rdojd"]
 [ext_resource type="Texture2D" uid="uid://bj45e1m8rxrtx" path="res://img/Game festival (12).svg" id="3_1w8ht"]
 [ext_resource type="Texture2D" uid="uid://ds4sl0hjp15dk" path="res://img/Game festival (9).svg" id="4_6vdni"]
+[ext_resource type="Script" path="res://GameFestival(14).gd" id="4_aa64r"]
+[ext_resource type="Script" path="res://desaparecerContainer.gd" id="5_2376e"]
 [ext_resource type="Texture2D" uid="uid://cr13c8qn2bwl0" path="res://img/Game festival (7).svg" id="5_qwiep"]
 [ext_resource type="Texture2D" uid="uid://b05jwt206lvsk" path="res://img/Game festival (6).svg" id="6_hkrme"]
 [ext_resource type="Texture2D" uid="uid://v6egovp6lavo" path="res://img/Game festival (13).svg" id="7_pwf0k"]
 [ext_resource type="Texture2D" uid="uid://c0isjitkvqkbo" path="res://img/Game festival (10).svg" id="8_130i1"]
 [ext_resource type="Texture2D" uid="uid://yb742addxsp1" path="res://img/Game festival (11).svg" id="9_g33er"]
 [ext_resource type="Texture2D" uid="uid://bmn46ln5elic4" path="res://img/Game festival (8).svg" id="10_k7ee1"]
+[ext_resource type="Script" path="res://TextContainer.gd" id="10_x5vrt"]
 [ext_resource type="Texture2D" uid="uid://dplayd5o2vrra" path="res://img/Game festival (14).svg" id="11_mvbop"]
 [ext_resource type="Texture2D" uid="uid://roo24ct8wreh" path="res://img/Game festival (5).svg" id="12_l11tu"]
 [ext_resource type="Texture2D" uid="uid://bkb2oya27f2rr" path="res://img/Game festival (4).svg" id="13_01lmv"]
 [ext_resource type="Texture2D" uid="uid://b2413ust7xcy2" path="res://img/ingieneria.svg" id="14_u3in8"]
 [ext_resource type="Texture2D" uid="uid://g4wf70rult7h" path="res://img/ucn.svg" id="15_5rol4"]
 [ext_resource type="Texture2D" uid="uid://hbvjl1bycr74" path="res://img/txt1.svg" id="16_546xt"]
-[ext_resource type="Texture2D" uid="uid://cda8qeg3uf63o" path="res://img/Untitled design (1).svg" id="16_ema5q"]
 [ext_resource type="Texture2D" uid="uid://b6evmakvrq2r7" path="res://img/txt2.svg" id="17_uf3tq"]
 [ext_resource type="Texture2D" uid="uid://cw6ci08sejk56" path="res://img/txt3.svg" id="18_c7ov2"]
 
@@ -26,6 +29,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_kll77")
 metadata/_edit_lock_ = true
 
 [node name="GameFestival(17)" type="Sprite2D" parent="."]
@@ -34,80 +38,192 @@ scale = Vector2(1, 0.959893)
 texture = ExtResource("1_rdojd")
 metadata/_edit_lock_ = true
 
-[node name="GameFestival(12)" type="Sprite2D" parent="."]
-position = Vector2(716, 354)
-texture = ExtResource("3_1w8ht")
-
-[node name="GameFestival(9)" type="Sprite2D" parent="."]
-position = Vector2(948, 358)
-texture = ExtResource("4_6vdni")
-
-[node name="GameFestival(7)" type="Sprite2D" parent="."]
-position = Vector2(875, 997)
-texture = ExtResource("5_qwiep")
-
-[node name="GameFestival(6)" type="Sprite2D" parent="."]
-position = Vector2(674, 1002)
-texture = ExtResource("6_hkrme")
-
-[node name="GameFestival(13)" type="Sprite2D" parent="."]
-position = Vector2(1196, 357)
-texture = ExtResource("7_pwf0k")
-
-[node name="GameFestival(10)" type="Sprite2D" parent="."]
-position = Vector2(711, 848)
-scale = Vector2(0.676471, 0.676471)
-texture = ExtResource("8_130i1")
-
-[node name="GameFestival(11)" type="Sprite2D" parent="."]
-position = Vector2(1227, 850)
-scale = Vector2(0.710526, 0.710526)
-texture = ExtResource("9_g33er")
-
-[node name="GameFestival(8)" type="Sprite2D" parent="."]
-position = Vector2(963, 872)
-texture = ExtResource("10_k7ee1")
-
 [node name="GameFestival(14)" type="Sprite2D" parent="."]
 position = Vector2(962, 26)
 texture = ExtResource("11_mvbop")
+script = ExtResource("4_aa64r")
 
-[node name="GameFestival(5)" type="Sprite2D" parent="."]
-position = Vector2(1213, 1044)
-texture = ExtResource("12_l11tu")
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 902.0
+offset_right = 564.0
+offset_bottom = 1010.0
+text = "DALE VIDA AL POSTER!!
+PRESIONA 1,2 o 3 PARA HACER ZOOM AL TEXTO CORRESPONDIENTE
 
-[node name="GameFestival(4)" type="Sprite2D" parent="."]
-position = Vector2(1058, 1016)
-texture = ExtResource("13_01lmv")
+PRESIONA 4,5 o 6 PARA REDUCIR EL ZOOM AL TEXTO CORRESPONDIENTE"
 
-[node name="Ingieneria" type="Sprite2D" parent="."]
-position = Vector2(1261, 959)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("14_u3in8")
+[node name="DesaparecerContainer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 875.0
+offset_top = 997.0
+offset_right = 915.0
+offset_bottom = 1037.0
+script = ExtResource("5_2376e")
 
-[node name="Ucn" type="Sprite2D" parent="."]
-position = Vector2(1313, 1036)
-scale = Vector2(0.492481, 0.492481)
-texture = ExtResource("15_5rol4")
+[node name="TextContainer" type="Control" parent="DesaparecerContainer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+pivot_offset = Vector2(76, -936)
+script = ExtResource("10_x5vrt")
+scale_b = Vector2(2, 2)
 
-[node name="UntitledDesign(1)" type="Sprite2D" parent="."]
-position = Vector2(1645.83, -537.987)
-scale = Vector2(0.985938, 1.16146)
-texture = ExtResource("16_ema5q")
-offset = Vector2(6.76019, 49.2294)
-
-[node name="Txt1" type="Sprite2D" parent="."]
-position = Vector2(962, 162)
+[node name="Txt1" type="Sprite2D" parent="DesaparecerContainer/TextContainer"]
+position = Vector2(88.1575, -937.205)
 rotation = 0.00308021
 scale = Vector2(0.412852, 0.423955)
 texture = ExtResource("16_546xt")
+offset = Vector2(-2.04102, 241.082)
 
-[node name="Txt2" type="Sprite2D" parent="."]
-position = Vector2(1144, 631)
+[node name="ColorRect" type="ColorRect" parent="DesaparecerContainer/TextContainer/Txt1"]
+visible = false
+show_behind_parent = true
+offset_left = -863.0
+offset_top = -20.0
+offset_right = 879.0
+offset_bottom = 446.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="DesaparecerContainer"]
+
+[node name="DesaparecerContainer2" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 875.0
+offset_top = 997.0
+offset_right = 915.0
+offset_bottom = 1037.0
+script = ExtResource("5_2376e")
+
+[node name="GameFestival(12)" type="Sprite2D" parent="DesaparecerContainer2"]
+position = Vector2(-159, -643)
+texture = ExtResource("3_1w8ht")
+
+[node name="GameFestival(9)" type="Sprite2D" parent="DesaparecerContainer2"]
+position = Vector2(73, -639)
+texture = ExtResource("4_6vdni")
+
+[node name="GameFestival(13)" type="Sprite2D" parent="DesaparecerContainer2"]
+position = Vector2(321, -640)
+texture = ExtResource("7_pwf0k")
+
+[node name="DesaparecerContainer3" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 875.0
+offset_top = 997.0
+offset_right = 915.0
+offset_bottom = 1037.0
+script = ExtResource("5_2376e")
+
+[node name="TextContainer2" type="Control" parent="DesaparecerContainer3"]
+anchors_preset = 0
+offset_top = -1.0
+offset_right = 40.0
+offset_bottom = 39.0
+pivot_offset = Vector2(446, -243)
+script = ExtResource("10_x5vrt")
+scale_b = Vector2(2, 2)
+
+[node name="Txt2" type="Sprite2D" parent="DesaparecerContainer3/TextContainer2"]
+position = Vector2(446, -246)
 scale = Vector2(0.425, 0.425)
 texture = ExtResource("17_uf3tq")
+offset = Vector2(-416.47, -282.353)
 
-[node name="Txt3" type="Sprite2D" parent="."]
-position = Vector2(757, 620)
+[node name="ColorRect2" type="ColorRect" parent="DesaparecerContainer3/TextContainer2/Txt2"]
+visible = false
+show_behind_parent = true
+offset_left = -861.0
+offset_top = -588.118
+offset_right = 45.0
+offset_bottom = 13.8823
+
+[node name="TextContainer3" type="Control" parent="DesaparecerContainer3"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+pivot_offset = Vector2(-289, -269)
+script = ExtResource("10_x5vrt")
+scale_b = Vector2(2, 2)
+
+[node name="Txt3" type="Sprite2D" parent="DesaparecerContainer3/TextContainer3"]
+position = Vector2(-493, -447)
 scale = Vector2(0.425, 0.425)
 texture = ExtResource("18_c7ov2")
+offset = Vector2(889.412, 164.706)
+
+[node name="ColorRect3" type="ColorRect" parent="DesaparecerContainer3/TextContainer3/Txt3"]
+visible = false
+show_behind_parent = true
+offset_left = 475.0
+offset_top = -132.0
+offset_right = 1341.0
+offset_bottom = 492.0
+
+[node name="DesaparecerContainer4" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1750.0
+offset_top = 1994.0
+offset_right = 1790.0
+offset_bottom = 2034.0
+script = ExtResource("5_2376e")
+
+[node name="GameFestival(10)" type="Sprite2D" parent="DesaparecerContainer4"]
+position = Vector2(-1039, -1146)
+scale = Vector2(0.676471, 0.676471)
+texture = ExtResource("8_130i1")
+
+[node name="GameFestival(11)" type="Sprite2D" parent="DesaparecerContainer4"]
+position = Vector2(-523, -1144)
+scale = Vector2(0.710526, 0.710526)
+texture = ExtResource("9_g33er")
+
+[node name="GameFestival(8)" type="Sprite2D" parent="DesaparecerContainer4"]
+position = Vector2(-787, -1122)
+texture = ExtResource("10_k7ee1")
+
+[node name="DesaparecerContainer5" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 1750.0
+offset_top = 1994.0
+offset_right = 1790.0
+offset_bottom = 2034.0
+script = ExtResource("5_2376e")
+
+[node name="GameFestival(7)" type="Sprite2D" parent="DesaparecerContainer5"]
+position = Vector2(-873, -999.5)
+texture = ExtResource("5_qwiep")
+
+[node name="GameFestival(6)" type="Sprite2D" parent="DesaparecerContainer5"]
+position = Vector2(-1074, -994.5)
+texture = ExtResource("6_hkrme")
+
+[node name="DesaparecerContainer6" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1750.0
+offset_top = 1994.0
+offset_right = 1790.0
+offset_bottom = 2034.0
+script = ExtResource("5_2376e")
+
+[node name="GameFestival(5)" type="Sprite2D" parent="DesaparecerContainer6"]
+position = Vector2(-537, -950)
+texture = ExtResource("12_l11tu")
+
+[node name="GameFestival(4)" type="Sprite2D" parent="DesaparecerContainer6"]
+position = Vector2(-692, -978)
+texture = ExtResource("13_01lmv")
+
+[node name="Ingieneria" type="Sprite2D" parent="DesaparecerContainer6"]
+position = Vector2(-489, -1035)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_u3in8")
+
+[node name="Ucn" type="Sprite2D" parent="DesaparecerContainer6"]
+position = Vector2(-437, -958)
+scale = Vector2(0.492481, 0.492481)
+texture = ExtResource("15_5rol4")
